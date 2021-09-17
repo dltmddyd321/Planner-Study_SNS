@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Login_ex</string>
+    <string name="facebook_app_id">2731836027116413</string>
+    <string name="fb_login_protocol_scheme">fb2731836027116413</string>
+    <string name="success_login">로그인 성공</string>
+    <string name="failed_login">로그인 실패</string>
+</resources>
