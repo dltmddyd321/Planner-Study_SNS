@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Developer_Planner_Test/app/src/main/res/layout/activity_check_password.xml" value="0.36614583333333334" />
+        <entry key="..\:/Developer_Planner_Test/app/src/main/res/layout/activity_info_menu.xml" value="0.36614583333333334" />
+        <entry key="..\:/Developer_Planner_Test/app/src/main/res/layout/activity_input_info.xml" value="0.36614583333333334" />
         <entry key="..\:/Developer_Planner_Test/app/src/main/res/layout/activity_login.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Developer_Planner_Test/app/src/main/res/layout/activity_update_password.xml" value="0.36614583333333334" />
+        <entry key="..\:/Developer_Planner_Test/app/src/main/res/layout/activity_update_user_info.xml" value="0.36614583333333334" />
         <entry key="..\:/Login_ex/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.36102564102564105" />
         <entry key="..\:/Login_ex/app/src/main/res/drawable/ic_launcher_background.xml" value="0.36102564102564105" />
         <entry key="..\:/Login_ex/app/src/main/res/drawable/round_background.xml" value="0.36102564102564105" />

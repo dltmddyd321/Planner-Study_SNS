@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     ImageView weatherIcon;
     String password = "";
+    private long backBtnTime = 0;
 
     //데이터를 호출할 서비스의 기본 주소
     private final String url = "http://api.openweathermap.org/data/2.5/weather";
@@ -184,4 +185,20 @@ public class MainActivity extends AppCompatActivity {
 
         public void onProviderDisabled(String provider) { }
     };
+
+    @Override
+    public void onBackPressed() {
+        long curTime = System.currentTimeMillis();
+        long gapTime = curTime - backBtnTime;
+
+        if(0 <= gapTime && 2000 >= gapTime) {
+            super.onBackPressed();
+            finishAffinity();
+            System.runFinalization();
+            System.exit(0);
+        } else {
+            backBtnTime = curTime;
+            ToastMessage("한번 더 누르면 종료됩니다.");
+        }
+    }
 }

@@ -48,6 +48,7 @@ import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
     private static final String TAG = "LoginActivity";
+    private long backBtnTime = 0;
 
     private FirebaseAuth mAuth;
     private int loginCnt;
@@ -123,11 +124,19 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     }
 
     @Override
-    public void onBackPressed(){
-        super.onBackPressed();
-        moveTaskToBack(true);
-        Process.killProcess(Process.myPid());
-        System.exit(1);
+    public void onBackPressed() {
+        long curTime = System.currentTimeMillis();
+        long gapTime = curTime - backBtnTime;
+
+        if(0 <= gapTime && 2000 >= gapTime) {
+            super.onBackPressed();
+            finishAffinity();
+            System.runFinalization();
+            System.exit(0);
+        } else {
+            backBtnTime = curTime;
+            ToastMessage("한번 더 누르면 종료됩니다.");
+        }
     }
 
 
