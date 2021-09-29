@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE CALENDER (_id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, date TEXT, alarm TEXT, memo TEXT);");
+        sqLiteDatabase.execSQL("CREATE TABLE CALENDER (_id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, date TEXT, alarm TEXT, memo TEXT NOT NULL);");
     }
 
     // DB 업그레이드를 위해 버전이 변경될 때 호출되는 함수
@@ -35,6 +35,7 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.close();
     }
 
+    //제목 가져오기
     public String getTitle(String date) {
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
         String title = "";
@@ -46,6 +47,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return title;
     }
 
+    //날짜 가져오기
     public String getDay(String date) {
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
         String day = "";

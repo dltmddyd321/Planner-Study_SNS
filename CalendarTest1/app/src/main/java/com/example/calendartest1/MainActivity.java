@@ -19,7 +19,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ScheduleMemo {
 
     CalendarView calendarView;
     TextView dateTextView, scheduleTitleText, dateTitle;
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         scheduleTitleText = (TextView) findViewById(R.id.scheduleTitle);
         memoBtn = (Button) findViewById(R.id.memoButton);
         dateTitle = (TextView) findViewById(R.id.dateTitle);
-        String date = getIntent().getStringExtra("date");
         String title = getIntent().getStringExtra("title");
 
         calendar = Calendar.getInstance();
@@ -50,16 +49,12 @@ public class MainActivity extends AppCompatActivity {
                 memoBtn.setVisibility(View.VISIBLE);
                 String day = String.format("%d년 %d월 %d일",year,month+1,dayOfMonth);
                 dateTextView.setText(day);
-                dateTitle.setText(date);
 
-                if(day.equals(date)) {
-                    scheduleTitleText.setText(title);
+                if(day.equals(dbHelper.getDay(day))) {
+                    scheduleTitleText.setText(dbHelper.getTitle(day));
                 } else {
                     scheduleTitleText.setText("");
                 }
-
-
-
                 memoBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

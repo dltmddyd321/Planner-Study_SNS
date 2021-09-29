@@ -75,15 +75,14 @@ public class ScheduleMemo extends AppCompatActivity {
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(titleEditText.getText().equals("")||memoEditText.getText().equals("")) {
+                String title = titleEditText.getText().toString();
+                String date = dateEditText.getText().toString();
+                String alarm = selectedTimeText.getText().toString();
+                String memo = memoEditText.getText().toString();
+                if(title.equals("") || memo.equals("")) {
                     Toast.makeText(getApplicationContext(), "빈칸 불가",Toast.LENGTH_SHORT).show();
                 } else {
-                    String title = titleEditText.getText().toString();
-                    String date = dateEditText.getText().toString();
-                    String alarm = selectedTimeText.getText().toString();
-                    String memo = memoEditText.getText().toString();
                     dbHelper.insertData(title,date,alarm,memo);
-
                     dbTitle.setText(dbHelper.getTitle(date));
                     dbDay.setText(dbHelper.getDay(date));
                     Intent intent = new Intent(ScheduleMemo.this, MainActivity.class);
@@ -93,6 +92,5 @@ public class ScheduleMemo extends AppCompatActivity {
                 }
             }
         });
-
     }
 }
