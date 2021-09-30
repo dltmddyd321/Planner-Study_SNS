@@ -49,6 +49,14 @@ public class ScheduleMemo extends AppCompatActivity {
         String date = getIntent().getStringExtra("date");
         dateEditText.setText(date);
 
+        if(dateEditText.getText().toString().equals(dbHelper.getDay(date))) {
+            titleEditText.setText(dbHelper.getTitle(date));
+            memoEditText.setText(dbHelper.getMemo(date));
+        } else {
+            titleEditText.setText("");
+            memoEditText.setText("");
+        }
+
         AlarmCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

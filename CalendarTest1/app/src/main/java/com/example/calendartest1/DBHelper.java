@@ -58,4 +58,28 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return day;
     }
+
+    //알람 가져오기
+    public String getAlarm(String date) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        String alarm = "";
+
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM CALENDER WHERE date='"+ date +"';",null);
+        while (cursor.moveToNext()) {
+            alarm = cursor.getString(3);
+        }
+        return alarm;
+    }
+
+    //메모 가져오기
+    public String getMemo(String date) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        String memo = "";
+
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM CALENDER WHERE date='"+ date +"';",null);
+        while (cursor.moveToNext()) {
+            memo = cursor.getString(4);
+        }
+        return memo;
+    }
 }
