@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +24,9 @@ public class Check_Password extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_password);
+
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
 
         emailTextView = (TextView) findViewById(R.id.emailTextView);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);

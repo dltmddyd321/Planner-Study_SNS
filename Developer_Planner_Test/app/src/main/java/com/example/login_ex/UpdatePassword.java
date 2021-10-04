@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +25,10 @@ public class UpdatePassword extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_password);
+
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
+
         Intent intent = getIntent();
         password = intent.getStringExtra("password");
         mAuth = FirebaseAuth.getInstance();

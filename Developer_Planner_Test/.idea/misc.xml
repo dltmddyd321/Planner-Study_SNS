@@ -3,6 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/drawable-v24/ic_add.xml" value="0.36666666666666664" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_calendar.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_check_password.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_check_personinfo.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_dday.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_event_check.xml" value="0.28177083333333336" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_event_main.xml" value="0.28177083333333336" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_info_menu.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_input_info.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_login.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_main.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_setting.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_signup.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_update_user_info.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_weather_info.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/event_item.xml" value="0.28177083333333336" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/google_result.xml" value="0.35052083333333334" />
+        <entry key="..\:/Developer_Planner_Test - (2)/app/src/main/res/layout/schedule_memo.xml" value="0.35052083333333334" />
         <entry key="..\:/Developer_Planner_Test/app/src/main/res/layout/activity_check_password.xml" value="0.36614583333333334" />
         <entry key="..\:/Developer_Planner_Test/app/src/main/res/layout/activity_info_menu.xml" value="0.36614583333333334" />
         <entry key="..\:/Developer_Planner_Test/app/src/main/res/layout/activity_input_info.xml" value="0.36614583333333334" />
@@ -21,6 +39,14 @@
         <entry key="..\:/Login_ex/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.36102564102564105" />
         <entry key="..\:/Middle/Login_ex/app/src/main/res/layout/activity_setting.xml" value="0.36614583333333334" />
         <entry key="..\:/Middle/Login_ex/app/src/main/res/layout/activity_weather_info.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/Developer_Planner_Test - (2)/app/src/main/res/drawable-v24/round_background.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/Developer_Planner_Test - (2)/app/src/main/res/drawable/round_background.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/Developer_Planner_Test - (2)/app/src/main/res/font/font.xml" value="0.2794871794871795" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_check_password.xml" value="0.2" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_check_personinfo.xml" value="0.24592391304347827" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_setting.xml" value="0.25" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/Developer_Planner_Test - (2)/app/src/main/res/layout/activity_signup.xml" value="0.24592391304347827" />
         <entry key="..\:/android_ex/Login_ex (4)/app/src/main/res/layout/activity_check_password.xml" value="0.2015625" />
         <entry key="..\:/android_ex/Login_ex (4)/app/src/main/res/layout/activity_main.xml" value="0.2015625" />
         <entry key="..\:/android_ex/Login_ex (4)/app/src/main/res/layout/activity_update_password.xml" value="0.2015625" />

@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,6 +36,10 @@ public class Member_InitInfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_info);
+
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
+
         initInfoButton = (Button) findViewById(R.id.initInfoButton);
         nicknameEdit = (EditText) findViewById(R.id.nicknameEditText);
         mAuth = FirebaseAuth.getInstance();

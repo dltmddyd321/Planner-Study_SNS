@@ -1,5 +1,6 @@
 package com.example.login_ex;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -19,6 +20,9 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.google_result);
+
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
 
         Intent intent = getIntent();
         String nickname = intent.getStringExtra("nickName"); // MainActivity 부터 닉네임 전달받음.

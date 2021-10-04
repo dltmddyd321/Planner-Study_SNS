@@ -1,5 +1,6 @@
 package com.example.login_ex;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -19,6 +20,9 @@ public class InfoMenu extends AppCompatActivity {
         setContentView(R.layout.activity_info_menu);
         nowBtn = findViewById(R.id.nowBtn);
         laterBtn = findViewById(R.id.laterBtn);
+
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
 
         nowBtn.setOnClickListener(new View.OnClickListener() {
             @Override

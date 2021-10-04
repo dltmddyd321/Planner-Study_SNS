@@ -1,6 +1,7 @@
 package com.example.login_ex;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -48,6 +49,10 @@ public class WeatherInfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_info);
+
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
+
         tvResult = findViewById(R.id.tvResult);
         res2 = findViewById(R.id.res2);
         weatherIcon = findViewById(R.id.weatherIcon);

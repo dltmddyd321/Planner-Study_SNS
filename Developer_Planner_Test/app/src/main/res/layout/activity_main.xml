@@ -14,24 +14,16 @@
         app:layout_constraintRight_toRightOf="parent"/>
 
 
-
-    <Button
-        android:id="@+id/initInfoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/logoutButton"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="회원정보"
-        android:layout_marginTop="50dp"/>
-
     <Button
         android:id="@+id/weatherInfoButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="64dp"
         android:text="날씨정보"
+        android:background="@drawable/round_background"
+        android:fontFamily="@font/godom"
         app:layout_constraintEnd_toStartOf="@id/logoutButton"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,27 +31,57 @@
         android:id="@+id/logoutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/initInfoButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/godom"
         android:text="로그아웃"
-        android:layout_marginTop="50dp"/>
+        android:background="@drawable/round_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/updateUserInfo"
+        android:id="@+id/SettingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/weatherInfoButton2"
-        app:layout_constraintTop_toBottomOf="@id/logoutButton"
-        android:text="개인정보수정"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="152dp"
+        android:text="설정"
+        android:background="@drawable/round_background"
+        android:fontFamily="@font/godom"
+        app:layout_constraintEnd_toStartOf="@id/logoutButton"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/calendarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="152dp"
+        android:background="@drawable/round_background"
+        android:fontFamily="@font/godom"
+        android:text="캘린더"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/eventButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="232dp"
+        android:background="@drawable/round_background"
+        android:fontFamily="@font/godom"
+        android:text="이벤트"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="메인 화면"
         android:textSize="30dp"
+        android:fontFamily="@font/godom"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
