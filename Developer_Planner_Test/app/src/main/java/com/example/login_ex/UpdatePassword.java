@@ -26,9 +26,6 @@ public class UpdatePassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_password);
 
-        ActionBar actionBar =getSupportActionBar();
-        actionBar.hide();
-
         Intent intent = getIntent();
         password = intent.getStringExtra("password");
         mAuth = FirebaseAuth.getInstance();

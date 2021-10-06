@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.example.login_ex.MainActivity;
 import com.example.login_ex.R;
 
 public class Calendar extends ScheduleMemo {
@@ -124,5 +125,12 @@ public class Calendar extends ScheduleMemo {
         String text = sf.getString("text","D-Day 설정");
         dDayText.setText(text);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(Calendar.this, MainActivity.class);
+        startActivity(intent);
     }
 }

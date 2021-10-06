@@ -37,9 +37,6 @@ public class Member_InitInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_info);
 
-        ActionBar actionBar =getSupportActionBar();
-        actionBar.hide();
-
         initInfoButton = (Button) findViewById(R.id.initInfoButton);
         nicknameEdit = (EditText) findViewById(R.id.nicknameEditText);
         mAuth = FirebaseAuth.getInstance();

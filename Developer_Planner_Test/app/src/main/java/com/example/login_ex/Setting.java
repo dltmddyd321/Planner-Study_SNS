@@ -9,13 +9,15 @@ import android.view.View;
 
 public class Setting extends AppCompatActivity {
 
+    String password ="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-        ActionBar actionBar =getSupportActionBar();
-        actionBar.hide();
+        Intent intent = getIntent();
+        password = intent.getStringExtra("password");
 
         findViewById(R.id.btn_updateUserInfo).setOnClickListener(onClickListener);
     }
@@ -31,10 +33,10 @@ public class Setting extends AppCompatActivity {
             }
         }
     };
+
     private void UserInfo(){
         Intent intent = new Intent(Setting.this, Check_PersonInfo.class);
+        intent.putExtra("password",password);
         startActivity(intent);
     }
-
-
 }

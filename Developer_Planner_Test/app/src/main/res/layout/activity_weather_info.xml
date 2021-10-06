@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0E3C4"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
@@ -21,17 +22,6 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btnGet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#0070C7"
-            android:backgroundTint="@null"
-            android:onClick="getWeatherDetails"
-            android:text="Update!"
-            android:textColor="@android:color/white" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -52,7 +42,7 @@
         <ImageView
             android:id="@+id/weatherIcon"
             android:layout_width="100dp"
-            android:layout_height="100dp"/>
+            android:layout_height="100dp" />
 
     </LinearLayout>
 

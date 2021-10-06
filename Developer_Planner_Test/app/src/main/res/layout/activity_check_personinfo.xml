@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F0E3C4">
 
     <Button
         android:id="@+id/initInfoButton"
@@ -11,7 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="260dp"
         android:layout_marginEnd="63dp"
+        android:background="@drawable/round_background"
         android:text="회원정보"
+        android:fontFamily="@font/godom"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/updateUserInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/updateUserInfo"
@@ -20,10 +24,13 @@
     <Button
         android:id="@+id/updateUserInfo"
         android:layout_width="0dp"
+        android:fontFamily="@font/godom"
+        android:textColor="@color/black"
         android:layout_height="49dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="188dp"
         android:layout_marginEnd="71dp"
+        android:background="@drawable/round_background"
         android:text="개인정보수정"
         app:layout_constraintEnd_toStartOf="@+id/initInfoButton"
         app:layout_constraintStart_toStartOf="parent"

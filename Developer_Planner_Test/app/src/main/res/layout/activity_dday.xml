@@ -2,13 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F0E3C4">
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/godom"
         android:text="D-day 설정"
         android:textColor="@color/black"
         android:textSize="35dp"
@@ -30,6 +32,7 @@
         android:id="@+id/todayDateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/godom"
         android:text="오늘 날짜"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -55,6 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/godom"
         android:text="D-Day 날짜"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -80,6 +84,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/godom"
+        android:textColor="@color/black"
+        android:background="@drawable/round_background"
         android:text="D-day 설정"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

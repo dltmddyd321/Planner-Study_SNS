@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F0E3C4">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:fontFamily="@font/godom"
         android:gravity="center"
         android:text="포츈 쿠키!"
         android:textColor="@color/black"
@@ -42,10 +44,13 @@
 
     <Button
         android:id="@+id/openBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="122dp"
+        android:layout_height="49dp"
         android:layout_marginTop="416dp"
+        android:background="@drawable/round_background"
+        android:fontFamily="@font/godom"
         android:text="쿠키를 열어보자!"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="428dp"
+        android:fontFamily="@font/godom"
         android:gravity="center"
         android:text="오늘은 운명의 상대를 만날수도?"
         android:textColor="@color/black"

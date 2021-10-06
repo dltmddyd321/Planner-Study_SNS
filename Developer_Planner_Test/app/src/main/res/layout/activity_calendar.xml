@@ -2,10 +2,10 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#F0E3C4"
     android:orientation="vertical">
 
     <TextView
@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Developer Planner"
+        android:fontFamily="@font/godom"
+        android:textColor="@color/black"
         android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,6 +39,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
+        android:backgroundTint="#F0E3C4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/dDayText"
         app:layout_constraintTop_toBottomOf="@id/calendarView"
@@ -62,12 +65,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dDaySetting" />
 
@@ -89,6 +93,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
+        android:textSize="25dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:visibility="visible"
@@ -99,28 +104,31 @@
 
     <TextView
         android:id="@+id/dateTitle"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_width="400dp"
+        android:layout_height="104dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:textColor="@color/black"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/contextEditText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/contextEditText"
-        app:layout_constraintTop_toTopOf="@+id/contextEditText" />
+        app:layout_constraintTop_toTopOf="@+id/contextEditText"
+        app:layout_constraintVertical_bias="0.441" />
 
     <Button
         android:id="@+id/memoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_background"
         android:text="일정 기록"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contextEditText" />
 
@@ -129,12 +137,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/round_background"
         android:text="일정 수정"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintHorizontal_bias="0.877"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contextEditText" />
 
@@ -143,12 +152,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/round_background"
         android:text="일정 삭제"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contextEditText" />
 

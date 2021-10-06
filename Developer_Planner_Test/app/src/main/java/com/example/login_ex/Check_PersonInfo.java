@@ -9,7 +9,6 @@ import android.view.View;
 
 public class Check_PersonInfo extends AppCompatActivity {
 
-
     String password = "";
 
     @Override
@@ -17,9 +16,8 @@ public class Check_PersonInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_personinfo);
 
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        Intent intent = getIntent();
+        password = intent.getStringExtra("password");
 
         findViewById(R.id.initInfoButton).setOnClickListener(onClickListener);
         findViewById(R.id.updateUserInfo).setOnClickListener(onClickListener);

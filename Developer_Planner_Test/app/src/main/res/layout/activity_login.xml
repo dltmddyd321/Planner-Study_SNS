@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0E3C4"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/godom"
+        android:textColor="@color/black"
         android:layout_marginTop="50dp"
         android:text="Developer Planner"
         android:textSize="30dp"
@@ -48,7 +51,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@drawable/round_background"
         android:text="회원가입"
+        android:fontFamily="@font/godom"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
@@ -58,30 +64,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@drawable/round_background"
         android:text="로그인"
+        android:fontFamily="@font/godom"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/singUpButton"
         app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/btn_google"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="200sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/singUpButton" />
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/btn_facebook"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="200sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_google"/>
+        app:layout_constraintTop_toBottomOf="@+id/btn_google" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

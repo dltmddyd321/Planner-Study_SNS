@@ -32,9 +32,6 @@
             android:name=".Setting"
             android:exported="true" />
         <activity
-            android:name=".InfoMenu"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity android:name=".LoginActivity">

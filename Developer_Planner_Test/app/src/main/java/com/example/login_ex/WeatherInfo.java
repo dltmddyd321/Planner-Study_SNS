@@ -50,18 +50,17 @@ public class WeatherInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_info);
 
-        ActionBar actionBar =getSupportActionBar();
-        actionBar.hide();
-
         tvResult = findViewById(R.id.tvResult);
         res2 = findViewById(R.id.res2);
         weatherIcon = findViewById(R.id.weatherIcon);
 
         //GPS 시스템 활용을 위한 Location Manager 선언
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        getWeatherDetails();
     }
 
-    public void getWeatherDetails(View view) {
+    public void getWeatherDetails() {
         //위치에 따른 날씨 정보를 가져오는 함수로서, 먼저 사용자 위치 권한을 허가받기
         if (ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(WeatherInfo.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 0);

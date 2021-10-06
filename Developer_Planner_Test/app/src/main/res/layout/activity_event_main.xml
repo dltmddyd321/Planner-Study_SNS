@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0E3C4"
     tools:context=".eventpart.EventMain">
 
     <ListView
+        android:id="@+id/eventList"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/eventList"
         tools:listitem="@layout/event_item" />
 
 </LinearLayout>
