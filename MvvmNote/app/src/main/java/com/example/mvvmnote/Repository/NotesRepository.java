@@ -14,6 +14,8 @@ public class NotesRepository {
 
     public NotesDao notesDao;
     public LiveData<List<Notes>> getAllNotes;
+    public LiveData<List<Notes>> highToLow;
+    public LiveData<List<Notes>> lowToHigh;
 
     public NotesRepository(Application application) {
         NotesDatabase database = NotesDatabase.getDatabaseInstance(application);

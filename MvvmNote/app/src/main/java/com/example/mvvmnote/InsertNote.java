@@ -12,6 +12,7 @@ import com.example.mvvmnote.ViewModel.NotesViewModel;
 import com.example.mvvmnote.databinding.ActivityInsertNoteBinding;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class InsertNote extends AppCompatActivity {
 
@@ -25,6 +26,7 @@ public class InsertNote extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityInsertNoteBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        Objects.requireNonNull(getSupportActionBar()).setTitle("나의 메모장");
 
         notesViewModel = ViewModelProviders.of(this).get(NotesViewModel.class);
 
@@ -68,7 +70,7 @@ public class InsertNote extends AppCompatActivity {
     private void CreateNotes(String title, String subTitle, String notes) {
 
         Date date = new Date();
-        CharSequence sequence = DateFormat.format("MMMM d, YYYY", date.getTime());
+        CharSequence sequence = DateFormat.format("MMMM d, yyyy", date.getTime());
 
         Notes notes1 = new Notes();
         notes1.notesTitle = title;
@@ -78,7 +80,7 @@ public class InsertNote extends AppCompatActivity {
         notes1.notesDate = sequence.toString();
         notesViewModel.insertNote(notes1);
 
-        Toast.makeText(this,"gffdsfds",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"등록 완료!",Toast.LENGTH_SHORT).show();
 
         finish();
     }
