@@ -24,6 +24,7 @@
         android:layout_width="300dp"
         android:layout_height="250dp"
         android:layout_marginTop="116dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/cookiewhat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -39,20 +40,6 @@
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/openBtn"
-        android:layout_width="122dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="416dp"
-        android:background="@drawable/round_background"
-        android:fontFamily="@font/godom"
-        android:text="쿠키를 열어보자!"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

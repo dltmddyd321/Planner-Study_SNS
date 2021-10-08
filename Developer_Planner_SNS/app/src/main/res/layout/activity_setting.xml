@@ -25,10 +25,9 @@
         android:layout_marginBottom="96dp"
         android:fontFamily="@font/godom"
         android:text="설정"
-        android:textColor="@color/black"
         android:textSize="28dp"
+        android:textColor="@color/black"
         android:textStyle="bold"
-
         app:layout_constraintBottom_toTopOf="@+id/tv_info"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -48,105 +47,84 @@
 
     <TextView
         android:id="@+id/tv_info"
-        android:layout_width="304dp"
-        android:layout_height="47dp"
+        android:layout_width="303dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="178dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="48dp"
         android:fontFamily="@font/godom"
         android:gravity="center_vertical"
         android:text="개인정보 설정"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_updatePersonInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_los" />
+        app:layout_constraintStart_toStartOf="@+id/tv_los"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="420dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/tv_alalog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setting"
-        app:layout_constraintVertical_bias="0.63" />
 
     <TextView
         android:id="@+id/tv_perinfo"
-        android:layout_width="306dp"
+        android:layout_width="304dp"
         android:layout_height="43dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="64dp"
         android:fontFamily="@font/godom"
         android:gravity="center_vertical"
         android:text="회원정보 설정"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv_info2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/tv_info"
-        app:layout_constraintTop_toBottomOf="@+id/tv_info"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_info" />
 
     <TextView
         android:id="@+id/tv_alalog"
         android:layout_width="118dp"
         android:layout_height="21dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/godom"
         android:text="알람 및 로그인 여부"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/tv_info2"
-        app:layout_constraintStart_toStartOf="@+id/tv_perinfo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_info" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="420dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/tv_alalog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setting"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintStart_toStartOf="@+id/tv_los"
+        app:layout_constraintTop_toBottomOf="@+id/tv_perinfo" />
 
     <Switch
         android:id="@+id/switch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right|center_vertical"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_info2"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_info2" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_info2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info"
+        app:layout_constraintVertical_bias="0.906" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right|center_vertical"
-        android:layout_marginTop="28dp"
         android:layout_marginEnd="29dp"
+        android:layout_marginBottom="166dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/switch2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/switch2"
-        app:layout_constraintTop_toBottomOf="@+id/view5" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tv_perinfo"
+        app:layout_constraintVertical_bias="0.691" />
 
     <TextView
         android:id="@+id/tv_info2"
-        android:layout_width="278dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="17dp"
+        android:layout_width="304dp"
+        android:layout_height="43dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/godom"
         android:gravity="center_vertical"
@@ -155,26 +133,13 @@
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_info3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/switch2"
         app:layout_constraintStart_toStartOf="@+id/tv_perinfo"
         app:layout_constraintTop_toBottomOf="@+id/tv_alalog" />
 
-    <View
-        android:layout_width="420dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/tv_info"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setting"
-        app:layout_constraintVertical_bias="0.84" />
-
     <TextView
         android:id="@+id/tv_info3"
-        android:layout_width="283dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="17dp"
+        android:layout_width="304dp"
+        android:layout_height="43dp"
         android:layout_marginBottom="152dp"
         android:fontFamily="@font/godom"
         android:gravity="center_vertical"
@@ -183,29 +148,15 @@
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/switch1"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_info2"
         app:layout_constraintTop_toBottomOf="@+id/tv_info2" />
-
-    <View
-        android:id="@+id/view5"
-        android:layout_width="420dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/tv_info3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setting"
-        app:layout_constraintVertical_bias="0.966" />
 
     <Button
         android:id="@+id/btn_updateUserInfo"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginTop="192dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginEnd="56dp"
         android:background="@drawable/right"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -215,36 +166,14 @@
         android:id="@+id/btn_updatePersonInfo"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="52dp"
         android:background="@drawable/right"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toEndOf="@+id/tv_info"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_updateUserInfo"
         app:srcCompat="@drawable/right" />
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="420dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/tv_info3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setting"
-        app:layout_constraintVertical_bias="0.776" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="420dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/tv_info3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.694" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
