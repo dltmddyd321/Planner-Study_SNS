@@ -57,7 +57,7 @@ public class WeatherInfo extends AppCompatActivity {
     private final String url = "http://api.openweathermap.org/data/2.5/weather";
 
     //서비스에서 제공받은 API KEY 등록
-    private final String appid = "80b3b408e398e420f91d1e3fe08b5328";
+    private final String appid = "YOUR-API-KEY-HERE";
     DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     @Override
