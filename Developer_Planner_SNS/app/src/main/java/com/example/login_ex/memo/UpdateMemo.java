@@ -1,6 +1,7 @@
 package com.example.login_ex.memo;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -22,8 +23,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.Date;
 import java.util.Objects;
-
 public class UpdateMemo extends AppCompatActivity {
+
 
     ActivityUpdateMemoBinding binding;
     String priority = "1";

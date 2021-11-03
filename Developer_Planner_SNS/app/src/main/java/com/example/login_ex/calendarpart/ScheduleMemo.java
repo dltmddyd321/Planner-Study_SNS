@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.login_ex.R;
@@ -34,6 +35,9 @@ public class ScheduleMemo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.schedule_memo);
+
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
 
         dbHelper = new DBHelper(getApplicationContext(), "Calendar.db", null, 1);
         updateButton = (Button) findViewById(R.id.updateButton);

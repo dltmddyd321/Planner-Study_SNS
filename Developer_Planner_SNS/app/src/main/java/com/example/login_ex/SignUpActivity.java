@@ -76,7 +76,7 @@ public class SignUpActivity extends AppCompatActivity {
                                     goLogin();
                                 } else {
                                     // TODO 실패 UI
-                                    ToastMessage("비밀번호는 6자리 이상만 가능합니다!!");
+                                    ToastMessage("비번이 6자리 미만이거나 아이디가 이미 존재합니다!");
                                 }
                             }
                         });

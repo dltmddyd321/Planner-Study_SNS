@@ -1,5 +1,6 @@
 package com.example.login_ex.eventpart;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,6 +23,9 @@ public class EventMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityEventMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
 
         int[] imageId = {R.drawable.cookiewhat, R.drawable.none};
         String[] name = {"포츈쿠키", "미정"};

@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Developer_Planner_1008 (1)/app/src/main/res/layout/activity_calendar.xml" value="0.36614583333333334" />
+        <entry key="..\:/Developer_Planner_1008 (1)/app/src/main/res/layout/activity_check_password.xml" value="0.36614583333333334" />
         <entry key="..\:/Developer_Planner_1008 (1)/app/src/main/res/layout/activity_dday.xml" value="0.27239583333333334" />
         <entry key="..\:/Developer_Planner_1008 (1)/app/src/main/res/layout/activity_event_main.xml" value="0.27239583333333334" />
+        <entry key="..\:/Developer_Planner_1008 (1)/app/src/main/res/layout/activity_input_info.xml" value="0.36614583333333334" />
+        <entry key="..\:/Developer_Planner_1008 (1)/app/src/main/res/layout/activity_login.xml" value="0.36614583333333334" />
+        <entry key="..\:/Developer_Planner_1008 (1)/app/src/main/res/layout/activity_setting.xml" value="0.36614583333333334" />
+        <entry key="..\:/Developer_Planner_1008 (1)/app/src/main/res/layout/activity_signup.xml" value="0.36614583333333334" />
         <entry key="..\:/Developer_Planner_1008 (1)/app/src/main/res/layout/activity_weather_info.xml" value="0.36614583333333334" />
         <entry key="..\:/Developer_Planner_1008/app/src/main/res/drawable/delete_indictor.xml" value="0.3764102564102564" />
         <entry key="..\:/Developer_Planner_1008/app/src/main/res/layout/activity_input_info.xml" value="0.36614583333333334" />

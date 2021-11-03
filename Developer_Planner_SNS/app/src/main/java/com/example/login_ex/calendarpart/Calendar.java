@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 
 import com.example.login_ex.MainActivity;
 import com.example.login_ex.R;
@@ -30,6 +31,9 @@ public class Calendar extends ScheduleMemo {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
+
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
 
         dDayText = (TextView) findViewById(R.id.dDayText);
         dDaySetting = (ImageButton) findViewById(R.id.dDaySetting);

@@ -45,8 +45,38 @@ import java.util.Locale;
 
 public class WeatherInfo extends AppCompatActivity {
 
-    TextView tvResult, res2;
+    TextView tvResult, tvResult2, res2, weatherText, actionText;
     ImageView weatherIcon;
+    String [] enWeatherList = {
+            "clear sky",
+            "few clouds",
+            "broken clouds",
+            "scattered clouds",
+            "overcast clouds",
+            "snow",
+            "Thunderstorm",
+            "Rain",
+            "shower rain",
+            "light rain",
+            "moderate rain",
+            "mist",
+            "haze"
+    };
+    String [] krWeatherList = {
+            "맑음",
+            "구름 약간",
+            "구름 많음",
+            "구름 개임",
+            "흐린 구름",
+            "눈내림",
+            "뇌우",
+            "비내림",
+            "소나기",
+            "이슬비",
+            "적절한 비",
+            "옅은 안개",
+            "실안개"
+    };
 
     private GpsTracker gpsTracker;
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
@@ -80,8 +110,11 @@ public class WeatherInfo extends AppCompatActivity {
         double longitude = gpsTracker.getLongitude();
 
         tvResult = findViewById(R.id.tvResult);
-        res2 = findViewById(R.id.res2);
+        tvResult2 = findViewById(R.id.tvResult2);
         weatherIcon = findViewById(R.id.weatherIcon);
+        weatherText = findViewById(R.id.weatherText);
+        actionText = findViewById(R.id.actionText);
+        res2 = findViewById(R.id.res2);
 
         getWeatherDetails(latitude, longitude);
     }
@@ -97,6 +130,8 @@ public class WeatherInfo extends AppCompatActivity {
                 public void onResponse(String response) {
                     String output = "";
                     String output2 = "";
+                    String output3 = "";
+                    String output4 = "";
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         JSONArray jsonArray = jsonObject.getJSONArray("weather");
@@ -108,32 +143,43 @@ public class WeatherInfo extends AppCompatActivity {
                         JSONObject jsonObjectMain = jsonObject.getJSONObject("main");
                         double temp = jsonObjectMain.getDouble("temp") - 273.15;
                         double feelsLike = jsonObjectMain.getDouble("feels_like") - 273.15;
-                        float pressure = jsonObjectMain.getInt("pressure");
                         int humidity = jsonObjectMain.getInt("humidity");
 
                         JSONObject jsonObjectWind = jsonObject.getJSONObject("wind");
                         String wind = jsonObjectWind.getString("speed");
 
-                        JSONObject jsonObjectClouds = jsonObject.getJSONObject("clouds");
-                        String clouds = jsonObjectClouds.getString("all");
-
                         JSONObject jsonObjectSys = jsonObject.getJSONObject("sys");
                         String countryName = jsonObjectSys.getString("country");
                         String cityName = jsonObject.getString("name");
-                        res2.setTextColor(Color.GREEN);
-                        tvResult.setTextColor(Color.RED);
-                        output += "Current weather!"
-                                + "\n Temp: " + decimalFormat.format(temp) + " ℃"
-                                + "\n Feels Like: " + decimalFormat.format(feelsLike) + " ℃"
-                                + "\n Description: " + description;
-                        output2 = "Wind Speed: " + wind + "m/s";
-                        res2.setText(output2);
+
+                        for(int i=0; i<enWeatherList.length; i++) {
+                            if(description.equals(enWeatherList[i])) {
+                                description = krWeatherList[i];
+                            }
+                        }
+
+                        if(description.equals("구름 약간"))
+                        {
+                            if( 10 < temp && temp < 20){
+                                actionText.setText("운동");
+                            }
+                        }
+                        output = description;
+                        output4 +="   ⦁ 체감온도: " + decimalFormat.format(feelsLike) + " ℃"
+                                + "   ⦁ 습도: " + humidity + "%"
+                                + "   ⦁ 풍속: " + wind + "m/s";
+                        output2 = cityName + " (" + countryName + ")";
+                        output3 = decimalFormat.format(temp) + " ℃";
                         tvResult.setText(output);
+                        weatherText.setText(output3);
+                        res2.setText(output2);
+                        tvResult2.setText(output4);
                         Picasso.get().load(iconUrl).into(weatherIcon);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
+
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {

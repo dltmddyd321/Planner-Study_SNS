@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.login_ex.R;
@@ -31,6 +32,10 @@ public class DdayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dday);
+
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
+
         calendarView = (CalendarView) findViewById(R.id.calendarView);
         dDayButton = (Button) findViewById(R.id.dDaySettingButton);
         todayDate = (TextView) findViewById(R.id.todayDate);

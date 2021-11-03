@@ -1,5 +1,6 @@
 package com.example.login_ex.eventpart;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -30,6 +31,8 @@ public class EventCheck extends AppCompatActivity {
         infoText = findViewById(R.id.infoText);
         notOpenImg = findViewById(R.id.notOpenImg);
 
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.hide();
 
         notOpenImg.setOnClickListener(new View.OnClickListener() {
             @Override
