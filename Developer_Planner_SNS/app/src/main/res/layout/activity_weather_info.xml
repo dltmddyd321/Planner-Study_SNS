@@ -97,32 +97,24 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
             android:text="오늘같은 날, 이런 활동 어떠세요?"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/actionText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/custom_linear"
             android:gravity="center_vertical"
-            android:orientation="vertical" >
-            
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="50dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:paddingStart="50dp">
 
                 <ImageView
                     android:id="@+id/firstActivityImg"
@@ -136,36 +128,66 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/dish"/>
+                    android:src="@drawable/dish" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="50dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:paddingStart="50dp">
 
                 <ImageView
                     android:id="@+id/firstWhatImg"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="50dp"
                     android:src="@drawable/what" />
 
                 <ImageView
                     android:id="@+id/secondWhatImg"
-                    android:layout_width="45dp"
-                    android:layout_marginStart="100dp"
-                    android:layout_height="45dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/what"/>
+                    android:layout_marginStart="130dp"
+                    android:src="@drawable/what" />
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="50dp">
 
+                <TextView
+                    android:id="@+id/firstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="50dp"
+                    android:src="@drawable/what"
+                    android:text="요가"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/secondName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/what"
+                    android:text="도자기 공예"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 </LinearLayout>

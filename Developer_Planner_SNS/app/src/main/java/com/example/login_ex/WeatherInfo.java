@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -45,8 +46,8 @@ import java.util.Locale;
 
 public class WeatherInfo extends AppCompatActivity {
 
-    TextView tvResult, tvResult2, res2, weatherText, actionText;
-    ImageView weatherIcon;
+    TextView tvResult, tvResult2, res2, weatherText, firstName, secondName;
+    ImageView weatherIcon, firstImg, secondImg;
     String [] enWeatherList = {
             "clear sky",
             "few clouds",
@@ -87,7 +88,7 @@ public class WeatherInfo extends AppCompatActivity {
     private final String url = "http://api.openweathermap.org/data/2.5/weather";
 
     //서비스에서 제공받은 API KEY 등록
-    private final String appid = "YOUR-API-KEY-HERE";
+    private final String appid = "80b3b408e398e420f91d1e3fe08b5328";
     DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     @Override
@@ -113,8 +114,11 @@ public class WeatherInfo extends AppCompatActivity {
         tvResult2 = findViewById(R.id.tvResult2);
         weatherIcon = findViewById(R.id.weatherIcon);
         weatherText = findViewById(R.id.weatherText);
-        actionText = findViewById(R.id.actionText);
         res2 = findViewById(R.id.res2);
+        firstName = findViewById(R.id.firstName);
+        secondName = findViewById(R.id.secondName);
+        firstImg = findViewById(R.id.firstActivityImg);
+        secondImg = findViewById(R.id.secondActivityImg);
 
         getWeatherDetails(latitude, longitude);
     }
@@ -158,10 +162,66 @@ public class WeatherInfo extends AppCompatActivity {
                             }
                         }
 
-                        if(description.equals("구름 약간"))
+                        if(description.equals("맑음") || description.equals("구름 약간"))
                         {
-                            if( 10 < temp && temp < 20){
-                                actionText.setText("운동");
+                            if(temp > 10){
+                                firstName.setText("여행");
+                                firstImg.setImageResource(R.drawable.travel);
+                                secondName.setText("봉사활동");
+                                secondImg.setImageResource(R.drawable.volunteer);
+                            } else {
+                                firstName.setText("여행");
+                                firstImg.setImageResource(R.drawable.travel);
+                                secondName.setText("산책");
+                                secondImg.setImageResource(R.drawable.dogwalking);
+                            }
+                        } else if(description.equals("구름 많음") || description.equals("구름 개임") || description.equals("흐린 구름")) {
+                            if(temp > 10){
+                                firstName.setText("헬스");
+                                firstImg.setImageResource(R.drawable.gym);
+                                secondName.setText("독서");
+                                secondImg.setImageResource(R.drawable.reading);
+                            } else {
+                                firstName.setText("악기 배우기");
+                                firstImg.setImageResource(R.drawable.music);
+                                secondName.setText("명상");
+                                secondImg.setImageResource(R.drawable.myeongsang);
+                            }
+                        } else if(description.equals("뇌우") || description.equals("비내림") || description.equals("소나기") || description.equals("이슬비") || description.equals("적절한 비")) {
+                            if(temp > 10){
+                                firstName.setText("명상");
+                                firstImg.setImageResource(R.drawable.myeongsang);
+                                secondName.setText("자격증 공부");
+                                firstImg.setImageResource(R.drawable.certificate);
+                            } else {
+                                firstName.setText("악기 배우기");
+                                firstImg.setImageResource(R.drawable.music);
+                                secondName.setText("요가");
+                                secondImg.setImageResource(R.drawable.yoga2);
+                            }
+                        } else if(description.equals("눈내림")) {
+                            if(temp > 10){
+                                firstName.setText("악기 배우기");
+                                firstImg.setImageResource(R.drawable.music);
+                                secondName.setText("헬스");
+                                secondImg.setImageResource(R.drawable.gym);
+                            } else {
+                                firstName.setText("독서");
+                                firstImg.setImageResource(R.drawable.reading);
+                                secondName.setText("요가");
+                                secondImg.setImageResource(R.drawable.yoga2);
+                            }
+                        } else if(description.equals("옅은 안개") || description.equals("실안개")) {
+                            if(temp > 10){
+                                firstName.setText("악기 배우기");
+                                firstImg.setImageResource(R.drawable.music);
+                                secondName.setText("헬스");
+                                secondImg.setImageResource(R.drawable.gym);
+                            } else {
+                                firstName.setText("독서");
+                                firstImg.setImageResource(R.drawable.reading);
+                                secondName.setText("요가");
+                                secondImg.setImageResource(R.drawable.yoga2);
                             }
                         }
                         output = description;
@@ -188,6 +248,12 @@ public class WeatherInfo extends AppCompatActivity {
             });
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             requestQueue.add(stringRequest);
+    }
+
+    private void getInformation(String name) {
+        Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+        intent.putExtra(SearchManager.QUERY, name);
+        startActivity(intent);
     }
 
     /*
