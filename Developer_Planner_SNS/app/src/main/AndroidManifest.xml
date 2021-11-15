@@ -31,6 +31,11 @@
         <activity
             android:name=".eventpart.EventMain"
             android:exported="true" />
+        <activity android:name=".communityfragment.FragmentMain"
+            android:exported="true"/>
+        <activity
+            android:name=".FullImage"
+            android:exported="false" />
         <activity
             android:name=".WeatherInfo"
             android:exported="true" />

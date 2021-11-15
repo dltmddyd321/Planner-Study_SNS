@@ -34,6 +34,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.login_ex.calendarpart.Calendar;
+import com.example.login_ex.communityfragment.FragmentMain;
 import com.example.login_ex.eventpart.EventMain;
 import com.example.login_ex.memo.MemoActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.calendarButton).setOnClickListener(onClickListener);
         findViewById(R.id.eventButton).setOnClickListener(onClickListener);
         findViewById(R.id.memo).setOnClickListener(onClickListener);
+        findViewById(R.id.community).setOnClickListener(onClickListener);
 
         getWeatherDetails(latitude, longitude);
 
@@ -173,6 +175,10 @@ public class MainActivity extends AppCompatActivity {
                     GoMemo();
                     break;
 
+                case R.id.community:
+                    GoCommunity();
+                    break;
+
             }
         }
     };
@@ -209,6 +215,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void GoMemo(){
         Intent intent = new Intent(MainActivity.this, MemoActivity.class);
+        startActivity(intent);
+    }
+
+    private void GoCommunity(){
+        Intent intent = new Intent(MainActivity.this, FragmentMain.class);
         startActivity(intent);
     }
 
