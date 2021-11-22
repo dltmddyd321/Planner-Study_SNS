@@ -26,15 +26,15 @@
         android:layout_marginStart="25dp"
         android:text="게시물"
         android:textAlignment="center"
-        app:layout_constraintStart_toEndOf="@id/imageView"
-        app:layout_constraintTop_toBottomOf="@id/postnum" />
+        app:layout_constraintTop_toBottomOf="@id/postnum"
+        app:layout_constraintStart_toEndOf="@id/imageView" />
 
     <TextView
         android:id="@+id/postnum"
         android:layout_width="55dp"
         android:layout_height="25dp"
-        android:layout_marginStart="25dp"
         android:layout_marginTop="64dp"
+        android:layout_marginStart="25dp"
         android:text="0"
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@id/imageView"
@@ -47,8 +47,8 @@
         android:layout_marginStart="25dp"
         android:text="팔로워"
         android:textAlignment="center"
-        app:layout_constraintStart_toEndOf="@id/postnum"
-        app:layout_constraintTop_toBottomOf="@id/follwernum" />
+        app:layout_constraintTop_toBottomOf="@id/follwernum"
+        app:layout_constraintStart_toEndOf="@id/postnum"/>
 
     <TextView
         android:id="@+id/follwernum"
@@ -65,19 +65,19 @@
         android:id="@+id/followingnum"
         android:layout_width="55dp"
         android:layout_height="25dp"
-        android:layout_marginStart="25dp"
         android:layout_marginTop="64dp"
+        android:layout_marginStart="25dp"
         android:text="0"
         android:textAlignment="center"
-        app:layout_constraintStart_toEndOf="@id/follwernum"
-        app:layout_constraintTop_toBottomOf="@id/ID" />
+        app:layout_constraintTop_toBottomOf="@id/ID"
+        app:layout_constraintStart_toEndOf="@id/follwernum"/>
 
     <TextView
         android:id="@+id/following"
         android:layout_width="55dp"
         android:layout_height="25dp"
-        android:layout_marginStart="25dp"
         android:layout_marginTop="3dp"
+        android:layout_marginStart="25dp"
         android:text="팔로잉"
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@id/follower"
@@ -91,7 +91,7 @@
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ID"
-        android:src="@drawable/dpmemo" />
+        android:src="@drawable/hobby" />
 
     <ImageButton
         android:id="@+id/button2"
@@ -105,14 +105,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <GridView
-        android:id="@+id/myGridView"
+        android:id="@+id/gridView"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/post"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_height="507dp"
+        android:numColumns="3"
+        android:gravity="center"
+        android:columnWidth="90dp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,23 +10,23 @@ import com.example.login_ex.communityadapter.SearchImageAdapter;
 
 public class FullImage extends AppCompatActivity {
 
-    ImageView imageView;
+    ImageView mainImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_image);
 
-        imageView = (ImageView) findViewById(R.id.image);
+        mainImage = (ImageView) findViewById(R.id.mainImage);
 
         getSupportActionBar().hide();
-        getSupportActionBar().setTitle("Full Screen");
 
         Intent intent = getIntent();
         int position = intent.getExtras().getInt("id");
 
         SearchImageAdapter searchImageAdapter = new SearchImageAdapter(this);
 
-        imageView.setImageResource(searchImageAdapter.allImageArray[position]);
+        mainImage.setImageResource(searchImageAdapter.allImageArray[position]);
+
     }
 }
