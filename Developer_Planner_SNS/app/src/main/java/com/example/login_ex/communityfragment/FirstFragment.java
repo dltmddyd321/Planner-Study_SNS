@@ -8,17 +8,21 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.login_ex.AddPost;
 import com.example.login_ex.R;
+import com.example.login_ex.adapter.PostAdapter;
+import com.example.login_ex.model.Post;
+
+import java.util.ArrayList;
 
 public class FirstFragment extends Fragment {
 
+    private PostAdapter adapter;
+    private ArrayList<Post> postList;
     ImageButton addPostBtn;
-
-    public FirstFragment() {
-        // Required empty public constructor
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,6 +31,7 @@ public class FirstFragment extends Fragment {
         View v = inflater.inflate(R.layout.first_fragment, container, false);
 
         addPostBtn = (ImageButton) v.findViewById(R.id.addPostBtn);
+        RecyclerView recyclerView = v.findViewById(R.id.feedRecyclerView);
 
         addPostBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +40,16 @@ public class FirstFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        postList = new ArrayList<>();
+        postList.add(new Post(R.drawable.weather,"choy2736", R.drawable.travel,"안녕하세요!!"));
+        postList.add(new Post(R.drawable.weather,"aaa", R.drawable.travel,"반갑습니다!!"));
+        postList.add(new Post(R.drawable.weather,"bbb", R.drawable.travel,"날씨가 좋네요!!"));
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+        adapter = new PostAdapter(postList);
+        recyclerView.setAdapter(adapter);
 
         return v;
     }

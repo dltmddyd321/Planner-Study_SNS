@@ -14,15 +14,15 @@ import androidx.fragment.app.Fragment;
 
 import com.example.login_ex.FullImage;
 import com.example.login_ex.R;
+import com.example.login_ex.adapter.PostAdapter;
 import com.example.login_ex.communityadapter.SearchImageAdapter;
+import com.example.login_ex.model.Post;
+
+import java.util.ArrayList;
 
 public class ThirdFragment extends Fragment {
 
     GridView gridView;
-
-    public ThirdFragment() {
-        // Required empty public constructor
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

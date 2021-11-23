@@ -20,10 +20,6 @@ public class SecondFragment extends Fragment {
 
     GridView gridView;
 
-    public SecondFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
