@@ -4,6 +4,7 @@ public class Input {
     String img;
     String message;
 
+    public Input(){}
 
     public Input(String img, String message) {
         this.img = img;
